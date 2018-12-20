@@ -3,6 +3,15 @@
 Created on Wed Dec 19 11:52:11 2018
 
 @author: jbrought
+Summary of Code:
+    - When started, enters infinite loop
+    - Checks for serial and mysql database connection
+    - If either is not present, waits until they are
+    - Reads serial port for data
+    - Data is split by commas
+    - Data is uploaded to mysql db(if available)
+    - If mysql db not available, saves to csv file
+    - If serial connection lost during script, restarts and waits
 
 TODO:
     Database connection error handling:
